@@ -71,6 +71,7 @@ class Sankari:
     Julkiset metodit
         arvo_hurraus()
     """
+    RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
     
     def __init__(self, nimi, rohkeus, katseen_voima):
         self.nimi = nimi
@@ -82,8 +83,8 @@ class Sankari:
             :return: huudahdus
             :rtype: str
             """
-        return self.
-
+        return (random.choice(RIEMUTAVUT))     
+    
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
 
