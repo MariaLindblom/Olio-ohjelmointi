@@ -74,6 +74,7 @@ class Sankari:
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
     
     def __init__(self, nimi):
+        """Konstruktori."""
         self.nimi = nimi
         self.rohkeus = random.randint(2, 9)
         self.katseen_voima = random.randint(1, 6)
