@@ -92,6 +92,85 @@ class Vuorenpeikko(Peikko):
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
         self.rohkeus = random.randint(6, 10)
         self.katseen_voima = random.randint(8, 10)
+        
+    def _arvo_sanat(self, tavut, n, erotin, p=0.5):        
+        """Muodostaa satunnaisen tekstin annetuista tavuista.
+        :param tavut: ne tavut, joita palautettava teksti voi sisältää
+        :type tavut: Union[list[str], tuple[str]]
+        :param n: mukaan poimittavien tavujen maksimimäärä
+        :type n: int
+        :param erotin: tavujen väliin satunnaisesti laitettava merkki
+        :type erotin: str
+        :param p: todennäköisyys lisätä erotin tavujen väliin (oletus 0.5)
+        :type p: float
+        :return: satunnainen teksti
+        :rtype: str
+        """
+        osat = random.choices(tavut, k=random.randint(2, n))
+        sanat = osat[0]
+        for osa in osat[1:]:
+            if random.random() < p:
+                sanat += erotin + osa
+            else:
+                sanat += osa.lower()
+        return sanat
+
+    def arvo_hurraus(self):
+        """Palauttaa satunnaisen hurraushuudahduksen.
+
+        :return: hurraava huudahdus
+        :rtype: str
+        """
+        return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
+    
+    
+class Luolanpeikko(Peikko):
+    """Luokka, joka kuvaa luolanpeikkoa.
+    :ivar nimi: peikon nimi, arvotaan
+    :type nimi: str
+    :ivar rohkeus: peikon rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: peikon katseen voimakkuus, arvotaan
+    :type katseen_voima: int
+
+    Julkiset metodit
+        arvo_hurraus()
+    """
+    def __init__(self):
+        """Konstruktori."""
+        self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
+        self.rohkeus = random.randint(4, 7)
+        self.katseen_voima = random.randint(3, 6)
+        
+    def _arvo_sanat(self, tavut, n, erotin, p=0.5):        
+        """Muodostaa satunnaisen tekstin annetuista tavuista.
+        :param tavut: ne tavut, joita palautettava teksti voi sisältää
+        :type tavut: Union[list[str], tuple[str]]
+        :param n: mukaan poimittavien tavujen maksimimäärä
+        :type n: int
+        :param erotin: tavujen väliin satunnaisesti laitettava merkki
+        :type erotin: str
+        :param p: todennäköisyys lisätä erotin tavujen väliin (oletus 0.5)
+        :type p: float
+        :return: satunnainen teksti
+        :rtype: str
+        """
+        osat = random.choices(tavut, k=random.randint(2, n))
+        sanat = osat[0]
+        for osa in osat[1:]:
+            if random.random() < p:
+                sanat += erotin + osa
+            else:
+                sanat += osa.lower()
+        return sanat
+
+    def arvo_hurraus(self):
+        """Palauttaa satunnaisen hurraushuudahduksen.
+
+        :return: hurraava huudahdus
+        :rtype: str
+        """
+        return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
 
 ### Kirjoita luokka Sankari tähän.
