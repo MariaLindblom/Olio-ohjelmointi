@@ -13,6 +13,13 @@ class Olento:
     Julkiset metodit
         arvo_hurraus()
     """
+    RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
+    
+    def __init__(self):
+        pass
+        
+    def arvo_hurraus(self):
+        pass
 
 class Peikko:
     """Luokka, joka kuvaa Peikon.
