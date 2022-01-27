@@ -21,7 +21,7 @@ class Olento:
     def arvo_hurraus(self):
         pass
 
-class Peikko:
+class Peikko(Olento):
     """Luokka, joka kuvaa Peikon.
 
     :ivar nimi: peikon nimi, arvotaan
@@ -77,7 +77,7 @@ class Peikko:
 
 
 ### Kirjoita luokka Sankari tähän.
-class Sankari:
+class Sankari(Olento):
     """Luokka, joka kuvaa Sankarin.
 
     :ivar nimi: sankarin nimi
