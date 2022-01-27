@@ -73,10 +73,10 @@ class Sankari:
     """
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
     
-    def __init__(self, nimi, rohkeus, katseen_voima):
+    def __init__(self, nimi):
         self.nimi = nimi
-        self.rohkeus = random.randit(2, 9)
-        self.katseen_voima = random.randit(1, 6)
+        self.rohkeus = random.randint(2, 9)
+        self.katseen_voima = random.randint(1, 6)
         
     def arvo_hurraus(self):
         """Palauttaa satunnaisen hurrahduksen
