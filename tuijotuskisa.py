@@ -1,6 +1,18 @@
 import random
 import time
 
+class Olento:
+    """Luokka, joka kuvaa Olentoja.
+    :ivar nimi: olennon nimi
+    :type nimi: str
+    :ivar rohkeus: olennon rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: olennon katseen voimakkuus, arvotaan
+    :type katseen_voima: int
+    
+    Julkiset metodit
+        arvo_hurraus()
+    """
 
 class Peikko:
     """Luokka, joka kuvaa Peikon.
