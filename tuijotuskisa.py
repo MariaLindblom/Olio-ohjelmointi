@@ -75,6 +75,24 @@ class Peikko(Olento):
         """
         return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
 
+class Vuorenpeikko(Peikko):
+    """Luokka, joka kuvaa vuorenpeikkoa.
+    :ivar nimi: peikon nimi, arvotaan
+    :type nimi: str
+    :ivar rohkeus: peikon rohkeus, arvotaan
+    :type rohkeus: int
+    :ivar katseen_voima: peikon katseen voimakkuus, arvotaan
+    :type katseen_voima: int
+
+    Julkiset metodit
+        arvo_hurraus()
+    """
+    def __init__(self):
+        """Konstruktori."""
+        self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
+        self.rohkeus = random.randint(6, 10)
+        self.katseen_voima = random.randint(8, 10)
+
 
 ### Kirjoita luokka Sankari tähän.
 class Sankari(Olento):
