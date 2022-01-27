@@ -82,6 +82,7 @@ class Sankari:
             :return: huudahdus
             :rtype: str
             """
+        return self.
 
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
