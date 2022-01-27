@@ -78,8 +78,10 @@ class Sankari:
         self.katseen_voima = random.randit(1, 6)
         
     def arvo_hurraus(self):
-        
-    
+        """Palauttaa satunnaisen hurrahduksen
+            :return: huudahdus
+            :rtype: str
+            """
 
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
