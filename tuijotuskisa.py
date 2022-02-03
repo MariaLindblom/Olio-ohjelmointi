@@ -200,7 +200,8 @@ class Sankari(Olento):
             :return: huudahdus
             :rtype: str
             """
-        return (random.choice(RIEMUTAVUT))     
+        RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
+        return random.choice(RIEMUTAVUT)     
     
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
@@ -281,7 +282,8 @@ while sankari.rohkeus > 0:
     time.sleep(0.7)
 
     # Tulostetaan vastaan tulevan peikon tiedot.
-    peikko = Peikko()
+    peikot = (Peikko(), Vuorenpeikko(), Luolanpeikko())
+    peikko = random.choice(peikot)
     peikon_tiedot = peikko.nimi + " [" + str(peikko.rohkeus) + "]"
     print(f"Vastaan tulee hurja {peikon_tiedot}!")
     time.sleep(1)
