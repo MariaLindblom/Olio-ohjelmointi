@@ -41,7 +41,7 @@ class Peikko(Olento):
     def __init__(self):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(4, 8)
+        self.rohkeus = random.randint(3, 6)
         self.katseen_voima = random.randint(2, 4)
 
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):
@@ -87,8 +87,8 @@ class Vuorenpeikko(Peikko):
     def __init__(self):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(6, 8)
-        self.katseen_voima = random.randint(8, 8)
+        self.rohkeus = random.randint(5, 8)
+        self.katseen_voima = random.randint(4, 8)
         
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):        
         """Muodostaa satunnaisen tekstin annetuista tavuista.
