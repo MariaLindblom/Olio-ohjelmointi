@@ -179,7 +179,6 @@ class Sankari(Olento):
     Julkiset metodit
         arvo_hurraus()
     """
-    RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
     
     def __init__(self, nimi):
         """Konstruktori."""
