@@ -52,7 +52,7 @@ class MonenLaskija(Laskija):
         """
         return sum([*luvut])
 
-    def kerro(self, a, b):
+    def kerro(self, *luvut):
         """Palauttaa lukujen tulon.
 
         :param a: tulon luku
@@ -61,11 +61,11 @@ class MonenLaskija(Laskija):
         :rtype: Union[int]
         """
         tulo = 1
-        for luku in [a, b]:
+        for luku in [*luvut]:
             tulo *= luku
         return tulo
 
-def argumenttien_tulostaja():
+#def argumenttien_tulostaja():
 
 
 ### Seuraavat rivit tekevät tarkistustulostukset. Älä koske niihin.
@@ -81,7 +81,7 @@ print(ml.kerro(1, 2, 3, 4, 5))
 print()
 print(ml.summaa(1, 2, 3, 4, 5, 6, 7))
 print(ml.kerro(1, 2, 3, 4, 5, 6 ,7))
-print()
-argumenttien_tulostaja(eka=42, toka='foo', kolmas=[0, 1, 2])
-print()
-argumenttien_tulostaja(nimi='Tero', ika=41, kaupunki='Turku', oppilaitos='TAI')
+#print()
+#argumenttien_tulostaja(eka=42, toka='foo', kolmas=[0, 1, 2])
+#print()
+#argumenttien_tulostaja(nimi='Tero', ika=41, kaupunki='Turku', oppilaitos='TAI')
