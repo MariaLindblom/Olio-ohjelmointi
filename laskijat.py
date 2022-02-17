@@ -42,7 +42,7 @@ class MonenLaskija(Laskija):
         summaa(Union[int])
         kerro(Union[int])
     """
-    def summaa(self, a, b):
+    def summaa(self, *luvut):
         """Palauttaa lukujen summan.
 
         :param a: summan luku
@@ -50,7 +50,7 @@ class MonenLaskija(Laskija):
         :return: lukujen summa
         :rtype: Union[int]
         """
-        return sum([a, b])
+        return sum([*luvut])
 
     def kerro(self, a, b):
         """Palauttaa lukujen tulon.
