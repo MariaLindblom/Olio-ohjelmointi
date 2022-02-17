@@ -69,7 +69,7 @@ class Monenlaskija(Laskija):
             tulo *= luku
         return tulo
 
-
+def argumenttien_tulostaja():
 
 
 ### Seuraavat rivit tekevät tarkistustulostukset. Älä koske niihin.
