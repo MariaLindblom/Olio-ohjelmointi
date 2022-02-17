@@ -35,7 +35,7 @@ class Laskija:
 
 
 ### Lisää MonenLaskija ja argumenttien_tulostaja tähän.
-class Monenlaskija(Laskija):
+class MonenLaskija(Laskija):
     """Luokka, joka toteuttaa eri laskutoimituksia.
 
     Julkiset metodit:
