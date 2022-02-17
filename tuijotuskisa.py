@@ -15,11 +15,11 @@ class Olento:
     """
     RIEMUTAVUT = ("Agh", "Ugh", "Ourgh", "Drar", "Brar", "Dza", "Gra", "Gur", "Rah", "Urgh", "Ra")
     
-    def __init__(self):
+    def __init__(self, min_rohkeus=1, min_katseen_voima=1):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(1, 8)
-        self.katseen_voima = random.randint(1, 8)
+        self.rohkeus = random.randint(min_rohkeus, min_rohkeus + 3)
+        self.katseen_voima = random.randint(min_katseen_voima, min_katseen_voima + 4)
         
     def arvo_hurraus(self):
         pass
@@ -38,11 +38,10 @@ class Peikko(Olento):
 
     NIMITAVUT = ("Ur", "Gar", "Grah", "Gur", "Kan", "Kazah", "Bar", "Bazh", "Ragh", "Rudz")
 
-    def __init__(self):
+    def __init__(self, min_rohkeus=1, min_katseen_voima=1):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(3, 6)
-        self.katseen_voima = random.randint(2, 4)
+        super().__init__(3, 6)
 
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):
         """Muodostaa satunnaisen tekstin annetuista tavuista.
@@ -87,8 +86,7 @@ class Vuorenpeikko(Peikko):
     def __init__(self):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(5, 8)
-        self.katseen_voima = random.randint(4, 8)
+        super().__init__(8, 8)
         
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):        
         """Muodostaa satunnaisen tekstin annetuista tavuista.
@@ -134,8 +132,7 @@ class Luolapeikko(Peikko):
     def __init__(self):
         """Konstruktori."""
         self.nimi = self._arvo_sanat(self.NIMITAVUT, 3, "-")
-        self.rohkeus = random.randint(4, 7)
-        self.katseen_voima = random.randint(3, 6)
+        super().__init__(6, 7)
         
     def _arvo_sanat(self, tavut, n, erotin, p=0.5):        
         """Muodostaa satunnaisen tekstin annetuista tavuista.
@@ -268,8 +265,8 @@ while sankari.rohkeus > 0:
     time.sleep(0.7)
 
     # Tulostetaan vastaan tulevan peikon tiedot.
-    peikot = (Peikko(), Vuorenpeikko(), Luolapeikko())
-    peikko = random.choice(peikot)
+    peikko = Peikko()
+    #peikko = random.choice([Peikko(), Vuorenpeikko(), Luolapeikko()])
     peikon_tiedot = peikko.nimi + " [" + str(peikko.rohkeus) + "]"
     print(f"Vastaan tulee hurja {peikon_tiedot}!")
     time.sleep(1)
