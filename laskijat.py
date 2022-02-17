@@ -50,7 +50,7 @@ class MonenLaskija(Laskija):
         :return: lukujen summa
         :rtype: Union[int]
         """
-        return sum([*luvut])
+        return sum(luvut)
 
     def kerro(self, *luvut):
         """Palauttaa lukujen tulon.
@@ -61,11 +61,19 @@ class MonenLaskija(Laskija):
         :rtype: Union[int]
         """
         tulo = 1
-        for luku in [*luvut]:
+        for luku in luvut:
             tulo *= luku
         return tulo
 
-#def argumenttien_tulostaja():
+def argumenttien_tulostaja(**kwargs):
+    """Funktio, joka tulostaa argumentit ja niiden avainsanat."""
+
+    sanakirja = {'':''}
+    for avainsana, arvo in kwargs.items():
+        sanakirja[(avainsana)] = (arvo)
+        lauseet = f"Argumentin {avainsana} arvo on {arvo}."
+        return lauseet
+        
 
 
 ### Seuraavat rivit tekevät tarkistustulostukset. Älä koske niihin.
@@ -81,7 +89,8 @@ print(ml.kerro(1, 2, 3, 4, 5))
 print()
 print(ml.summaa(1, 2, 3, 4, 5, 6, 7))
 print(ml.kerro(1, 2, 3, 4, 5, 6 ,7))
-#print()
-#argumenttien_tulostaja(eka=42, toka='foo', kolmas=[0, 1, 2])
-#print()
-#argumenttien_tulostaja(nimi='Tero', ika=41, kaupunki='Turku', oppilaitos='TAI')
+print()
+argumenttien_tulostaja(eka=42, toka='foo', kolmas=[0, 1, 2])
+print()
+argumenttien_tulostaja(nimi='Tero', ika=41, kaupunki='Turku', oppilaitos='TAI')
+
