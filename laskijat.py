@@ -39,30 +39,26 @@ class MonenLaskija(Laskija):
     """Luokka, joka toteuttaa eri laskutoimituksia.
 
     Julkiset metodit:
-        summaa(Union[int, float], Union[int, float])
-        kerro(Union[int, float], Union[int, float])
+        summaa(Union[int])
+        kerro(Union[int])
     """
     def summaa(self, a, b):
-        """Palauttaa kahden luvun summan.
+        """Palauttaa lukujen summan.
 
-        :param a: summan ensimmäinen luku
-        :type a: Union[int, float]
-        :param b: summan toinen luku
-        :type b: Union[int, float]
-        :return: lukujen a ja b summa
-        :rtype: Union[int, float]
+        :param a: summan luku
+        :type a: Union[int]
+        :return: lukujen summa
+        :rtype: Union[int]
         """
         return sum([a, b])
 
     def kerro(self, a, b):
-        """Palauttaa kahden luvun tulon.
+        """Palauttaa lukujen tulon.
 
-        :param a: tulon ensimmäinen luku
-        :type a: Union[int, float]
-        :param b: tulon toinen luku
-        :type b: Union[int, float]
-        :return: lukujen a ja b tulo
-        :rtype: Union[int, float]
+        :param a: tulon luku
+        :type a: Union[int]
+        :return: lukujen tulo
+        :rtype: Union[int]
         """
         tulo = 1
         for luku in [a, b]:
