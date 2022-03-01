@@ -265,8 +265,7 @@ while sankari.rohkeus > 0:
     time.sleep(0.7)
 
     # Tulostetaan vastaan tulevan peikon tiedot.
-    peikko = Peikko()
-    #peikko = random.choice([Peikko(), Vuorenpeikko(), Luolapeikko()])
+    peikko = random.choice([Peikko(), Vuorenpeikko(), Luolapeikko()])
     peikon_tiedot = peikko.nimi + " [" + str(peikko.rohkeus) + "]"
     print(f"Vastaan tulee hurja {peikon_tiedot}!")
     time.sleep(1)
