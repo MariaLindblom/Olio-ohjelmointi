@@ -5,6 +5,8 @@ class Palvelu:
   
   def __init__(self,tuotenimi, asiakkaat):
     """Konstruktori"""
+    self.tuotenimi = 
+    _self.asiakkaat = 
     
 
 class ParempiPalvelu(Palvelu):
