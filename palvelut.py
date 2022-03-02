@@ -15,10 +15,13 @@ class ParempiPalvelu(Palvelu):
     #_self.edut = ("...")
   
 class Asiakas:
-  """Luokka, joka kuvaa asikasta."""
+  """Luokka, joka kuvaa asiakasta."""
   
   def __init__(self, nimi, asiakasnro, ika):
     """Konstruktori."""
     _self.nimi = ("...")
     _self.asiakasnro = ("...")
     _self.ika = ("...")
+    
+  def _luo_nro():
+    """Arvoo numeron asiakkaalle."""
