@@ -8,6 +8,17 @@ class Palvelu:
     self.tuotenimi = 
     _self.asiakkaat = 
     
+  def __luo_asiakasrivi(Asiakas):
+    
+    
+  def lisaa_asiakas(Asiakas):
+    
+    
+  def poista_asiakas(Asiakas):
+    
+    
+  def tulosta_asiakkaat():
+    
 
 class ParempiPalvelu(Palvelu):
   """Luokka, joka kuvaa parempaa palvelua."""
@@ -15,6 +26,15 @@ class ParempiPalvelu(Palvelu):
   def __init__(self, edut):
     """Konstruktori."""
     #_self.edut = ("...")
+    
+  def lisaa_etu():
+    
+    
+  def poista_etu():
+    
+    
+  def tulosta_edut():
+  
   
 class Asiakas:
   """Luokka, joka kuvaa asiakasta."""
