@@ -1,6 +1,5 @@
 class Laskija:
     """Luokka, joka toteuttaa eri laskutoimituksia.
-
     Julkiset metodit:
         summaa(Union[int, float], Union[int, float])
         kerro(Union[int, float], Union[int, float])
@@ -8,7 +7,6 @@ class Laskija:
 
     def summaa(self, a, b):
         """Palauttaa kahden luvun summan.
-
         :param a: summan ensimmäinen luku
         :type a: Union[int, float]
         :param b: summan toinen luku
@@ -20,7 +18,6 @@ class Laskija:
 
     def kerro(self, a, b):
         """Palauttaa kahden luvun tulon.
-
         :param a: tulon ensimmäinen luku
         :type a: Union[int, float]
         :param b: tulon toinen luku
@@ -37,14 +34,12 @@ class Laskija:
 ### Lisää MonenLaskija ja argumenttien_tulostaja tähän.
 class MonenLaskija(Laskija):
     """Luokka, joka toteuttaa eri laskutoimituksia.
-
-    Julkiset metodit:
+        Julkiset metodit:
         summaa(Union[int])
         kerro(Union[int])
     """
     def summaa(self, *luvut):
         """Palauttaa lukujen summan.
-
         :param a: summan luku
         :type a: Union[int]
         :return: lukujen summa
@@ -54,7 +49,6 @@ class MonenLaskija(Laskija):
 
     def kerro(self, *luvut):
         """Palauttaa lukujen tulon.
-
         :param a: tulon luku
         :type a: Union[int]
         :return: lukujen tulo
@@ -68,11 +62,8 @@ class MonenLaskija(Laskija):
 def argumenttien_tulostaja(**kwargs):
     """Funktio, joka tulostaa argumentit ja niiden avainsanat."""
 
-    sanakirja = {'':''}
     for avainsana, arvo in kwargs.items():
-        sanakirja[(avainsana)] = (arvo)
-        lauseet = f"Argumentin {avainsana} arvo on {arvo}."
-        return lauseet
+        print(f'Argumentin "{avainsana}" arvo on {arvo}.')
         
 
 
@@ -93,4 +84,3 @@ print()
 argumenttien_tulostaja(eka=42, toka='foo', kolmas=[0, 1, 2])
 print()
 argumenttien_tulostaja(nimi='Tero', ika=41, kaupunki='Turku', oppilaitos='TAI')
-
