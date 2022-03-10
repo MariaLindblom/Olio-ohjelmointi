@@ -19,15 +19,15 @@ class Palvelu:
   def __init__(self,tuotenimi, asiakkaat):
     """Konstruktori"""
     self.tuotenimi = tuotenimi
-    _self.asiakkaat = asiakkaat[]
+    _self.asiakkaat = asiakkaat = []
     
   def __luo_asiakasrivi(Asiakas):
       pass
     
     
   def lisaa_asiakas(Asiakas):
-      pass
-    
+    """Lisää parametsrinä annetun asiakkaan asiakkaat-listaan."""
+    asiakkaat += asiakas
     
   def poista_asiakas(Asiakas):
       pass
@@ -48,10 +48,10 @@ class ParempiPalvelu(Palvelu):
     tulosta_edut
 """
   
-  def __init__(self, edut):
+  def __init__(self, tuotenimi):
     """Konstruktori."""
-    super().__init__()
-    _self.edut = edut[]
+    super().__init__(tuotenimi)
+    _self.edut = edut =[]
     
   def lisaa_etu():
       pass
@@ -78,7 +78,7 @@ class Asiakas:
         luo_nro()
     """
   
-  def __init__(self, nimi, asiakasnro, ika):
+  def __init__(self, nimi, ika, asiakasnro):
     """Konstruktori."""
     _self.nimi = nimi
     _self.asiakasnro = luo_nro()
@@ -87,4 +87,3 @@ class Asiakas:
   def _luo_nro():
     """Arvoo numeron asiakkaalle."""
     pass
-
