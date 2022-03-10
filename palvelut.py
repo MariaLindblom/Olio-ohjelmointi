@@ -19,7 +19,7 @@ class Palvelu:
   def __init__(self,tuotenimi, asiakkaat):
     """Konstruktori"""
     self.tuotenimi = tuotenimi
-    _self.asiakkaat = asiakkaat = []
+    self._asiakkaat = asiakkaat = []
     
   def __luo_asiakasrivi(Asiakas):
       pass
@@ -51,7 +51,7 @@ class ParempiPalvelu(Palvelu):
   def __init__(self, tuotenimi):
     """Konstruktori."""
     super().__init__(tuotenimi)
-    _self.edut = edut =[]
+    self._edut = edut =[]
     
   def lisaa_etu():
       pass
@@ -78,12 +78,13 @@ class Asiakas:
         luo_nro()
     """
   
-  def __init__(self, nimi, ika, asiakasnro):
+  def __init__(self, nimi, ika, asiakasnro = []):
     """Konstruktori."""
-    _self.nimi = nimi
-    _self.asiakasnro = luo_nro()
-    _self.ika = ika
+    self._nimi = nimi
+    self._asiakasnro = luo_nro()
+    self._ika = ika
     
   def _luo_nro():
     """Arvoo numeron asiakkaalle."""
     pass
+  
