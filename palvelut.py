@@ -88,5 +88,4 @@ class Asiakas:
   def _luo_nro():
     """Arvoo numeron asiakkaalle."""
     numerot = []
-    random.randint(0,9)
-    
+    numerot.append(random.randint(0,9))
