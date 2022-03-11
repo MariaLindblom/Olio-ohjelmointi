@@ -16,7 +16,7 @@ class Palvelu:
             luo_asiakasrivi(asiakas)
         """  
   
-  def __init__(self,tuotenimi, asiakkaat):
+  def __init__(self,tuotenimi):
     """Konstruktori"""
     self.tuotenimi = tuotenimi
     self._asiakkaat = asiakkaat = []
@@ -78,13 +78,15 @@ class Asiakas:
         luo_nro()
     """
   
-  def __init__(self, nimi, ika, asiakasnro = []):
+  def __init__(self, nimi, ika):
     """Konstruktori."""
     self._nimi = nimi
-    self._asiakasnro = luo_nro()
     self._ika = ika
+    self._asiakasnro = luo_nro()
+    
     
   def _luo_nro():
     """Arvoo numeron asiakkaalle."""
-    pass
-  
+    numerot = []
+    random.randint(0,9)
+    
