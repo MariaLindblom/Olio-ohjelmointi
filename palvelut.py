@@ -33,7 +33,7 @@ class Palvelu:
       pass
     
     
-  def tulosta_asiakkaat():
+  def tulosta_asiakkaat(self):
       pass
     
 
@@ -53,15 +53,15 @@ class ParempiPalvelu(Palvelu):
     super().__init__(tuotenimi)
     self._edut = edut =[]
     
-  def lisaa_etu():
+  def lisaa_etu(self):
       pass
     
     
-  def poista_etu():
+  def poista_etu(self):
       pass
     
     
-  def tulosta_edut():
+  def tulosta_edut(self):
       pass
   
   
@@ -85,10 +85,11 @@ class Asiakas:
     self._asiakasnro = luo_nro()
     
     
-  def _luo_nro():
+  def _luo_nro(self):
     """Arvoo numeron asiakkaalle."""
     numerot = []
     numerot.append(random.randint(0,9))
+    return numerot
 
 
   def get_asiakas(self):
@@ -96,11 +97,5 @@ class Asiakas:
 
 
   def set_asiakas(self):
-    if nimi and ika == True:
+    if nimi and ika == False:
       return
-
-  """get.nimi =
-  set.nimi =
-  get.ika =
-  set.ika =
-  get.asikasnumero ="""
