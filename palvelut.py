@@ -26,8 +26,8 @@ class Palvelu:
     
     
   def lisaa_asiakas(Asiakas):
-    """Lisää parametsrinä annetun asiakkaan asiakkaat-listaan."""
-    asiakkaat += asiakas
+    """Lisää parametrinä annetun asiakkaan asiakkaat-listaan."""
+    asiakkaat.append(asiakas)
     
   def poista_asiakas(Asiakas):
       pass
@@ -98,4 +98,7 @@ class Asiakas:
 
   def set_asiakas(self):
     if nimi and ika == False:
-      return
+      raise ValueError("Anna uusi nimi tai ikä.")
+    if nimi and ika == True:
+      return nimi, ika
+      
