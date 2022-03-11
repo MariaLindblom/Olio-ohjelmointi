@@ -89,3 +89,18 @@ class Asiakas:
     """Arvoo numeron asiakkaalle."""
     numerot = []
     numerot.append(random.randint(0,9))
+
+
+  def get_asiakas(self):
+    return (nimi,ika)
+
+
+  def set_asiakas(self):
+    if nimi and ika == True:
+      return
+
+  """get.nimi =
+  set.nimi =
+  get.ika =
+  set.ika =
+  get.asikasnumero ="""
