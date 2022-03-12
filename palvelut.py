@@ -69,11 +69,15 @@ class ParempiPalvelu(Palvelu):
     
     
   def poista_etu(self):
+    try:
+      edut.remove(etu)
+    except ValueError:
       pass
     
     
   def tulosta_edut(self):
-      pass
+    for asia in edut:
+      print(asia)
   
   
 class Asiakas:
