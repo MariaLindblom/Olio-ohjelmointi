@@ -33,6 +33,8 @@ class Palvelu:
       raise ValueError ("Anna asiakas.")
     
   def poista_asiakas(Asiakas):
+    """Poistaa parametrinä annetun asiakkaan,
+        jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
       asiakkaat.remove(Asiakas)
     except ValueError:
@@ -69,6 +71,8 @@ class ParempiPalvelu(Palvelu):
     
     
   def poista_etu(self):
+    """Poistaa parametrinä annetun edun,
+        jos etua ei ole edut-listassa ohitetaan ValueError."""
     try:
       edut.remove(etu)
     except ValueError:
