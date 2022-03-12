@@ -26,8 +26,11 @@ class Palvelu:
     
     
   def lisaa_asiakas(Asiakas):
-    """Lisää parametrinä annetun asiakkaan asiakkaat-listaan."""
-    asiakkaat.append(asiakas)
+    """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
+        nostaa ValeError:in, jos parametrin tottusarvo on false."""
+    asiakkaat.append(Asiakas)
+    if Asiakas == False:
+      raise ValueError ("Anna asiakas.")
     
   def poista_asiakas(Asiakas):
       pass
@@ -100,5 +103,4 @@ class Asiakas:
     if nimi and ika == False:
       raise ValueError("Anna uusi nimi tai ikä.")
     if nimi and ika == True:
-      return nimi, ika
       
