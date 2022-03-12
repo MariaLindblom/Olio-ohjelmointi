@@ -85,7 +85,7 @@ class Asiakas:
     """Konstruktori."""
     self._nimi = nimi
     self._ika = ika
-    self._asiakasnro = luo_nro()
+    #self._asiakasnro = _luo_nro()
     
     
   def _luo_nro(self):
@@ -95,12 +95,30 @@ class Asiakas:
     return numerot
 
 
-  def get_asiakas(self):
-    return (nimi,ika)
+  def get_nimi(self,nimi):
+    """Palauttaa nimen suoraan."""
+    return nimi
 
 
+  def set_nimi(self,nimi):
+    if nimi = False:
+      raise ValueError("Anna nimi.")
+
+
+  def get_ika(self,ika):
+    """Palauttaa iän suoraan."""
+    return ika
+
+
+  def set_ika(self,ika):
+    if ika == False:
+      raise ValueError("Anna ikä.")
+
+
+"""
   def set_asiakas(self):
     if nimi and ika == False:
       raise ValueError("Anna uusi nimi tai ikä.")
     if nimi and ika == True:
+      pass"""
       
