@@ -40,7 +40,8 @@ class Palvelu:
     
     
   def tulosta_asiakkaat(self):
-      pass
+    for ihminen in asiakkaat:
+      print(ihminen)
     
 
 class ParempiPalvelu(Palvelu):
@@ -60,7 +61,11 @@ class ParempiPalvelu(Palvelu):
     self._edut = edut =[]
     
   def lisaa_etu(self):
-      pass
+    """Lisää parametrinä annetun edun edut-listaan.
+        nostaa ValeError:in, jos parametrin tottusarvo on false."""
+    edut.append(etu)
+    if etu == False:
+      raise ValueError ("Anna etu.")
     
     
   def poista_etu(self):
