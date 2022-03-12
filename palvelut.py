@@ -33,6 +33,9 @@ class Palvelu:
       raise ValueError ("Anna asiakas.")
     
   def poista_asiakas(Asiakas):
+    try:
+      asiakkaat.remove(Asiakas)
+    except ValueError:
       pass
     
     
@@ -91,7 +94,8 @@ class Asiakas:
   def _luo_nro(self):
     """Arvoo numeron asiakkaalle."""
     numerot = []
-    numerot.append(random.randint(0,9))
+    numerolista = (random.randint(0,9)* 3)
+    numerot.append(numerolista)
     return numerot
 
 
@@ -101,7 +105,7 @@ class Asiakas:
 
 
   def set_nimi(self,nimi):
-    if nimi = False:
+    if nimi == False:
       raise ValueError("Anna nimi.")
 
 
@@ -113,6 +117,10 @@ class Asiakas:
   def set_ika(self,ika):
     if ika == False:
       raise ValueError("Anna ikä.")
+
+
+  def get_asiakasnumero(self,asiakasnro):
+    return 
 
 
 """
