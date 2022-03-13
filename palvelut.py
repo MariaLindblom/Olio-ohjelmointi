@@ -8,36 +8,39 @@ class Palvelu:
         :type asiakkaat: list
 
         Julkiset metodit
-            lisaa_asiakas(asiakas)
-            poista_asiakas(asiakas)
-            tulosta_asiakkaat(asiakas)
+            lisaa_asiakas(Asiakas)
+            poista_asiakas(Asiakas)
+            tulosta_asiakkaat
 
-        Salatut metodit
-            luo_asiakasrivi(asiakas)
+        Suojatut metodit
+            luo_asiakasrivi(Asiakas)
         """  
   
   def __init__(self,tuotenimi):
     """Konstruktori"""
     self.tuotenimi = tuotenimi
-    #self.__asiakkaat =
-    asiakkaat = []
-    
-  def _luo_asiakasrivi(self,asiakas):
-      pass
+    self.__asiakkaat = asiakkaat = []
     
     
-  def lisaa_asiakas(self,asikas):
+  def _luo_asiakasrivi(self,Asiakas):
+    get_ika
+    get_asiakasnro
+    f'{asiakas.get_nimi()} on asiaakkaamme.'
+    
+    
+  def lisaa_asiakas(self,Asikas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
         nostaa ValeError:in, jos parametrin tottusarvo on false."""
-    asiakkaat.append(asiakas)
+    asiakkaat.append(Asiakas)
     if Asiakas == False:
       raise ValueError ("Anna asiakas.")
     
-  def poista_asiakas(self,asiakas):
+    
+  def poista_asiakas(self,Asiakas):
     """Poistaa parametrinä annetun asiakkaan,
         jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
-      asiakkaat.remove(asiakas)
+      asiakkaat.remove(Asiakas)
     except ValueError:
       pass
     
@@ -56,12 +59,13 @@ class ParempiPalvelu(Palvelu):
     lisaa_etu
     poista_etu
     tulosta_edut
-"""
+    """
   
   def __init__(self, tuotenimi):
     """Konstruktori."""
     super().__init__(tuotenimi)
     self.__edut = edut =[]
+    
     
   def lisaa_etu(self):
     """Lisää parametrinä annetun edun edut-listaan.
@@ -90,7 +94,7 @@ class Asiakas:
         :ivar nimi: asiakkaan nimi
         :type nimi: str
         :ivar asiakasnro: asiakkaan numero
-        :type asiakasnro: int[]
+        :type asiakasnro: int,list
         :ivar ika: asiakkaan ikä
         :type ika: int
 
@@ -100,9 +104,9 @@ class Asiakas:
   
   def __init__(self, nimi, ika):
     """Konstruktori."""
-    self.__nimi = nimi
+    self._nimi = nimi
     self.__ika = ika
-    self.__asiakasnumero = _luo_nro(self)
+    #self.__asiakasnro = luo_nro()
     
     
   def __luo_nro(self):
@@ -133,14 +137,6 @@ class Asiakas:
       raise ValueError("Anna ikä.")
 
 
-  def get_asiakasnumero(self,asiakasnro):
-    return 
+  def get_asiakasnro(self,asiakasnro):
+    return
 
-
-"""
-  def set_asiakas(self):
-    if nimi and ika == False:
-      raise ValueError("Anna uusi nimi tai ikä.")
-    if nimi and ika == True:
-      pass"""
-      
