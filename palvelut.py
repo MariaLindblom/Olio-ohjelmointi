@@ -22,25 +22,25 @@ class Palvelu:
     self.__asiakkaat = asiakkaat = []
     
     
-  def _luo_asiakasrivi(self,Asiakas):
-    get_ika
-    get_asiakasnro
+  def _luo_asiakasrivi(self,asiakas):
+    #get_ika
+    #get_asiakasnro
     f'{asiakas.get_nimi()} on asiaakkaamme.'
     
     
-  def lisaa_asiakas(self,Asikas):
+  def lisaa_asiakas(self,asiakas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
         nostaa ValeError:in, jos parametrin tottusarvo on false."""
-    asiakkaat.append(Asiakas)
+    self.__asiakkaat.append(asiakas)
     if Asiakas == False:
       raise ValueError ("Anna asiakas.")
     
     
-  def poista_asiakas(self,Asiakas):
+  def poista_asiakas(self,asiakas):
     """Poistaa parametrinä annetun asiakkaan,
         jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
-      asiakkaat.remove(Asiakas)
+      asiakkaat.remove(asiakas)
     except ValueError:
       pass
     
