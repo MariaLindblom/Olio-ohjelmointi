@@ -19,24 +19,25 @@ class Palvelu:
   def __init__(self,tuotenimi):
     """Konstruktori"""
     self.tuotenimi = tuotenimi
-    self._asiakkaat = asiakkaat = []
+    #self.__asiakkaat =
+    asiakkaat = []
     
-  def __luo_asiakasrivi(Asiakas):
+  def _luo_asiakasrivi(self,asiakas):
       pass
     
     
-  def lisaa_asiakas(Asiakas):
+  def lisaa_asiakas(self,asikas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
         nostaa ValeError:in, jos parametrin tottusarvo on false."""
-    asiakkaat.append(Asiakas)
+    asiakkaat.append(asiakas)
     if Asiakas == False:
       raise ValueError ("Anna asiakas.")
     
-  def poista_asiakas(Asiakas):
+  def poista_asiakas(self,asiakas):
     """Poistaa parametrinä annetun asiakkaan,
         jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
-      asiakkaat.remove(Asiakas)
+      asiakkaat.remove(asiakas)
     except ValueError:
       pass
     
@@ -60,7 +61,7 @@ class ParempiPalvelu(Palvelu):
   def __init__(self, tuotenimi):
     """Konstruktori."""
     super().__init__(tuotenimi)
-    self._edut = edut =[]
+    self.__edut = edut =[]
     
   def lisaa_etu(self):
     """Lisää parametrinä annetun edun edut-listaan.
@@ -99,15 +100,15 @@ class Asiakas:
   
   def __init__(self, nimi, ika):
     """Konstruktori."""
-    self._nimi = nimi
-    self._ika = ika
-    #self._asiakasnro = _luo_nro()
+    self.__nimi = nimi
+    self.__ika = ika
+    self.__asiakasnumero = _luo_nro(self)
     
     
-  def _luo_nro(self):
+  def __luo_nro(self):
     """Arvoo numeron asiakkaalle."""
     numerot = []
-    numerolista = (random.randint(0,9)* 3)
+    numerolista = (random.randint(0,9))
     numerot.append(numerolista)
     return numerot
 
