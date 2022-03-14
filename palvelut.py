@@ -23,9 +23,8 @@ class Palvelu:
     
     
   def _luo_asiakasrivi(self,asiakas):
-    #get_ika
-    #get_asiakasnro
-    f'{asiakas.get_nimi()} on asiaakkaamme.'
+    """Luo asiakasrivin getterreitten saamilla tiedoilla."""
+    f'{asiakas.get_nimi()} ({get_asiakasnro}) on {get_ika}-vuotias.'
     
     
   def lisaa_asiakas(self,asiakas):
@@ -46,8 +45,11 @@ class Palvelu:
     
     
   def tulosta_asiakkaat(self):
+    """Tulostaa asiakas-listan jokaisen asiakkaan käyttämällä
+        luo_asiakasrivi metodia."""
     for ihminen in asiakkaat:
-      print(ihminen)
+      print(luo_asikasrivi(asiakas))
+     # print(ihminen)
     
 
 class ParempiPalvelu(Palvelu):
@@ -85,6 +87,7 @@ class ParempiPalvelu(Palvelu):
     
     
   def tulosta_edut(self):
+    """Tulostaa edut-listan."""
     for asia in edut:
       print(asia)
   
@@ -110,10 +113,12 @@ class Asiakas:
     
     
   def __luo_nro(self):
-    """Arvoo numeron asiakkaalle."""
+    """Arvoo kahdeksan numeora sisältävät listan asiakkaalle."""
     numerot = []
-    numerolista = (random.randint(0,9))
-    numerot.append(numerolista)
+    numero = 0
+    while numero < 8:
+      numerot.append(random.randint(0,9))
+      numero += 1
     return numerot
 
 
@@ -138,5 +143,5 @@ class Asiakas:
 
 
   def get_asiakasnro(self,asiakasnro):
-    return
-
+    return f'{XX-XXX-XXX}'
+    
