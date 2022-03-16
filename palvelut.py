@@ -142,5 +142,5 @@ class Asiakas:
 
 
   def get_asiakasnro(self,asiakasnro):
-    return 
+    return ""
     
