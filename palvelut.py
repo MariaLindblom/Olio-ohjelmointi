@@ -125,23 +125,25 @@ class Asiakas:
     if self._nimi == False:
       raise ValueError("Anna nimi.")
     else:
-      self._nimi = asiakkaan_nimi
+      self._nimi = asiakasnimi
       
 
-  def get_nimi():
+  def get_nimi(self,asiakasnimi):
     """Palauttaa nimen suoraan."""
-    return asiakkaan_nimi
+    return asiakasnimi
   
 
   def set_ika(self,ika):
     if self.__ika == False:
       raise ValueError("Anna ikä.")
+    else:
+      self.__ika = asiakas_ika
 
     
-  def get_ika(self):
+  def get_ika(self,asiakas_ika):
     """Palauttaa iän suoraan."""
-    return self.__ika
+    return asiakas_ika
 
   
   def get_asiakasnro(self,asiakasnro):
-    return f'{numerot:08}'
+    return f'{numerot:08}' #ei toimi
