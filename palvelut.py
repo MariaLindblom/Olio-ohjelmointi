@@ -24,7 +24,7 @@ class Palvelu:
     
   def _luo_asiakasrivi(self,Asiakas):
     """Luo asiakasrivin getterreitten saamilla tiedoilla."""
-    f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro}) on {Asiakas.get_ika}-vuotias.'
+    f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro()}) on {Asiakas.get_ika()}-vuotias.'
     
     
   def lisaa_asiakas(self,Asiakas):
@@ -119,27 +119,29 @@ class Asiakas:
       numerot.append(random.randint(0,9))
       numero += 1
     return numerot
-
-
-  def get_nimi(self,nimi):
-    """Palauttaa nimen suoraan."""
-    return self._nimi
-
+  
 
   def set_nimi(self,nimi):
     if self._nimi == False:
       raise ValueError("Anna nimi.")
+    else:
+      self._nimi = asiakkaan_nimi
+      
 
-
-  def get_ika(self,ika):
-    """Palauttaa iän suoraan."""
-    return self.__ika
-
+  def get_nimi():
+    """Palauttaa nimen suoraan."""
+    return asiakkaan_nimi
+  
 
   def set_ika(self,ika):
     if self.__ika == False:
       raise ValueError("Anna ikä.")
 
+    
+  def get_ika(self):
+    """Palauttaa iän suoraan."""
+    return self.__ika
 
+  
   def get_asiakasnro(self,asiakasnro):
     return f'{numerot:08}'
