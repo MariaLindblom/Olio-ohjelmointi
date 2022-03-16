@@ -29,9 +29,9 @@ class Palvelu:
     
   def lisaa_asiakas(self,asiakas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
-        nostaa ValeError:in, jos parametrin tottusarvo on false."""
-    self.__asiakkaat.append(asiakas)
-    if Asiakas == False:
+        nostaa ValeError:in, jos parametrin totuusarvo on false."""
+    asiakkaat.append(asiakas)
+    if asiakas == False:
       raise ValueError ("Anna asiakas.")
     
     
@@ -48,8 +48,7 @@ class Palvelu:
     """Tulostaa asiakas-listan jokaisen asiakkaan käyttämällä
         luo_asiakasrivi metodia."""
     for ihminen in asiakkaat:
-      print(luo_asikasrivi(asiakas))
-     # print(ihminen)
+      print(self._luo_asikasrivi(asiakas))
     
 
 class ParempiPalvelu(Palvelu):
@@ -71,7 +70,7 @@ class ParempiPalvelu(Palvelu):
     
   def lisaa_etu(self):
     """Lisää parametrinä annetun edun edut-listaan.
-        nostaa ValeError:in, jos parametrin tottusarvo on false."""
+        nostaa ValeError:in, jos parametrin totuusarvo on false."""
     edut.append(etu)
     if etu == False:
       raise ValueError ("Anna etu.")
@@ -87,7 +86,7 @@ class ParempiPalvelu(Palvelu):
     
     
   def tulosta_edut(self):
-    """Tulostaa edut-listan."""
+    """Käy läpi ja palauttaa edut-listan jokaisen edun."""
     for asia in edut:
       print(asia)
   
@@ -109,7 +108,7 @@ class Asiakas:
     """Konstruktori."""
     self._nimi = nimi
     self.__ika = ika
-    #self.__asiakasnro = luo_nro()
+    self.__asiakasnro = self.__luo_nro()
     
     
   def __luo_nro(self):
@@ -143,5 +142,5 @@ class Asiakas:
 
 
   def get_asiakasnro(self,asiakasnro):
-    return f'{XX-XXX-XXX}'
+    return 
     
