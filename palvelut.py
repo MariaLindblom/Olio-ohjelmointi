@@ -22,24 +22,24 @@ class Palvelu:
     self.__asiakkaat = asiakkaat = []
     
     
-  def _luo_asiakasrivi(self,asiakas):
+  def _luo_asiakasrivi(self,Asiakas):
     """Luo asiakasrivin getterreitten saamilla tiedoilla."""
-    f'{asiakas.get_nimi()} ({get_asiakasnro}) on {get_ika}-vuotias.'
+    f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro}) on {Asiakas.get_ika}-vuotias.'
     
     
-  def lisaa_asiakas(self,asiakas):
+  def lisaa_asiakas(self,Asiakas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
         nostaa ValeError:in, jos parametrin totuusarvo on false."""
-    asiakkaat.append(asiakas)
-    if asiakas == False:
+    self.__asiakkaat.append(Asiakas)
+    if Asiakas == False:
       raise ValueError ("Anna asiakas.")
     
     
-  def poista_asiakas(self,asiakas):
+  def poista_asiakas(self,Asiakas):
     """Poistaa parametrinä annetun asiakkaan,
         jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
-      asiakkaat.remove(asiakas)
+      self.__asiakkaat.remove(Asiakas)
     except ValueError:
       pass
     
@@ -47,8 +47,8 @@ class Palvelu:
   def tulosta_asiakkaat(self):
     """Tulostaa asiakas-listan jokaisen asiakkaan käyttämällä
         luo_asiakasrivi metodia."""
-    for ihminen in asiakkaat:
-      print(self._luo_asikasrivi(asiakas))
+    for ihminen in self.__asiakkaat:
+      print(self._luo_asiakasrivi(Asiakas))
     
 
 class ParempiPalvelu(Palvelu):
@@ -71,7 +71,7 @@ class ParempiPalvelu(Palvelu):
   def lisaa_etu(self):
     """Lisää parametrinä annetun edun edut-listaan.
         nostaa ValeError:in, jos parametrin totuusarvo on false."""
-    edut.append(etu)
+    self.__edut.append(etu)
     if etu == False:
       raise ValueError ("Anna etu.")
     
@@ -80,14 +80,14 @@ class ParempiPalvelu(Palvelu):
     """Poistaa parametrinä annetun edun,
         jos etua ei ole edut-listassa ohitetaan ValueError."""
     try:
-      edut.remove(etu)
+      self.__edut.remove(etu)
     except ValueError:
       pass
     
     
   def tulosta_edut(self):
     """Käy läpi ja palauttaa edut-listan jokaisen edun."""
-    for asia in edut:
+    for asia in self.__edut:
       print(asia)
   
   
@@ -123,24 +123,23 @@ class Asiakas:
 
   def get_nimi(self,nimi):
     """Palauttaa nimen suoraan."""
-    return nimi
+    return self._nimi
 
 
   def set_nimi(self,nimi):
-    if nimi == False:
+    if self._nimi == False:
       raise ValueError("Anna nimi.")
 
 
   def get_ika(self,ika):
     """Palauttaa iän suoraan."""
-    return ika
+    return self.__ika
 
 
   def set_ika(self,ika):
-    if ika == False:
+    if self.__ika == False:
       raise ValueError("Anna ikä.")
 
 
   def get_asiakasnro(self,asiakasnro):
-    return ""
-    
+    return f'{numerot:08}'
