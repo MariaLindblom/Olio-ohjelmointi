@@ -68,7 +68,7 @@ class ParempiPalvelu(Palvelu):
     self.__edut = edut =[]
     
     
-  def lisaa_etu(self):
+  def lisaa_etu(self, etu):
     """Lisää parametrinä annetun edun edut-listaan.
         nostaa ValeError:in, jos parametrin totuusarvo on false."""
     self.__edut.append(etu)
@@ -76,7 +76,7 @@ class ParempiPalvelu(Palvelu):
       raise ValueError ("Anna etu.")
     
     
-  def poista_etu(self):
+  def poista_etu(self,etu):
     """Poistaa parametrinä annetun edun,
         jos etua ei ole edut-listassa ohitetaan ValueError."""
     try:
@@ -128,9 +128,9 @@ class Asiakas:
       self._nimi = asiakasnimi
       
 
-  def get_nimi(self,asiakasnimi):
+  def get_nimi(self, asiakasnimi):
     """Palauttaa nimen suoraan."""
-    return asiakasnimi
+    return self.asiakasnimi
   
 
   def set_ika(self,ika):
@@ -146,4 +146,4 @@ class Asiakas:
 
   
   def get_asiakasnro(self,asiakasnro):
-    return f'{numerot:08}' #ei toimi
+    return f'{self.__luo_nro:08}' #ei toimi
