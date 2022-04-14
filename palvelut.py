@@ -113,11 +113,7 @@ class Asiakas:
     
   def __luo_nro(self):
     """Arvoo kahdeksan numeora sisältävät listan asiakkaalle."""
-    numerot = []
-    numero = 0
-    while numero < 8:
-      numerot.append(random.randint(0,9))
-      numero += 1
+    numerot = [random.randint(0,100) for i in range(3)]
     return numerot
   
 
