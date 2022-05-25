@@ -24,7 +24,8 @@ class Palvelu:
     
   def _luo_asiakasrivi(self,Asiakas):
     """Luo asiakasrivin getterreitten saamilla tiedoilla."""
-    f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro()}) on {Asiakas.get_ika()}-vuotias.'
+    return f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro()}) on {Asiakas.get_ika()}-vuotias.'
+    
     
     
   def lisaa_asiakas(self,Asiakas):
@@ -48,8 +49,8 @@ class Palvelu:
     """Tulostaa asiakas-listan jokaisen asiakkaan käyttämällä
         luo_asiakasrivi metodia."""
     for ihminen in self.__asiakkaat:
-      print(ihminen)
-      #(self._luo_asiakasrivi(Asiakas))
+      print(self._luo_asiakasrivi(ihminen))
+      
     
 
 class ParempiPalvelu(Palvelu):
@@ -125,9 +126,9 @@ class Asiakas:
         asiakasnimi = self._nimi
 
 
-  def get_nimi(self, asiakasnimi):
+  def get_nimi(self):
     """Palauttaa nimen suoraan."""
-    return asiakasnimi
+    return self._nimi
   
 
   def set_ika(self,asiakas_ika):
@@ -137,10 +138,10 @@ class Asiakas:
         asiakas_ika = self.__ika
 
     
-  def get_ika(self,asiakas_ika):
+  def get_ika(self):
     """Palauttaa iän suoraan."""
-    return asiakas_ika
+    return self.__ika
 
   
-  def get_asiakasnro(self,asiakasnro):
-    return f'{self.__luo_nro:08}' #ei toimi
+  def get_asiakasnro(self):
+        return f'{self.__asiakasnro[0]:02}-{self.__asiakasnro[1]:03}-{self.__asiakasnro[2]:03}'
