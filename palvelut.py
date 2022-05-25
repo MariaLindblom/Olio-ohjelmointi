@@ -48,7 +48,8 @@ class Palvelu:
     """Tulostaa asiakas-listan jokaisen asiakkaan käyttämällä
         luo_asiakasrivi metodia."""
     for ihminen in self.__asiakkaat:
-      print(self._luo_asiakasrivi(Asiakas))
+      print(ihminen)
+      #(self._luo_asiakasrivi(Asiakas))
     
 
 class ParempiPalvelu(Palvelu):
@@ -65,7 +66,7 @@ class ParempiPalvelu(Palvelu):
   def __init__(self, tuotenimi):
     """Konstruktori."""
     super().__init__(tuotenimi)
-    self.__edut = edut =[]
+    self.__edut = edut = []
     
     
   def lisaa_etu(self, etu):
@@ -121,19 +122,19 @@ class Asiakas:
     if self._nimi == False:
       raise ValueError("Anna nimi.")
     else:
-      self._nimi = asiakasnimi
-      
+        asiakasnimi = self._nimi
+
 
   def get_nimi(self, asiakasnimi):
     """Palauttaa nimen suoraan."""
-    return self.asiakasnimi
+    return asiakasnimi
   
 
-  def set_ika(self,ika):
+  def set_ika(self,asiakas_ika):
     if self.__ika == False:
       raise ValueError("Anna ikä.")
     else:
-      self.__ika = asiakas_ika
+        asiakas_ika = self.__ika
 
     
   def get_ika(self,asiakas_ika):
