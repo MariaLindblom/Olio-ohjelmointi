@@ -104,7 +104,7 @@ class Asiakas:
   
   def __init__(self, nimi, ika):
     """Konstruktori."""
-    self._nimi = nimi
+    self.__nimi = nimi
     self.__ika = ika
     self.__asiakasnro = self.__luo_nro()
     
@@ -116,10 +116,10 @@ class Asiakas:
   
 
   def set_nimi(self,nimi):
-    if self._nimi == False:
+    if self.__nimi == False:
       raise ValueError("Anna nimi.")
     else:
-        asiakasnimi = self._nimi
+        asiakasnimi = self.__nimi
 
 
   def get_nimi(self):
