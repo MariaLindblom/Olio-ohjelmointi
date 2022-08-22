@@ -6,12 +6,10 @@ class Palvelu:
         :type tuotenimi: str
         :ivar asiakkaat: lista asiakkaista 
         :type asiakkaat: list
-
         Julkiset metodit
             lisaa_asiakas(Asiakas)
             poista_asiakas(Asiakas)
             tulosta_asiakkaat
-
         Suojatut metodit
             luo_asiakasrivi(Asiakas)
         """  
@@ -22,25 +20,25 @@ class Palvelu:
     self.__asiakkaat = asiakkaat = []
     
     
-  def _luo_asiakasrivi(self,Asiakas):
+  def _luo_asiakasrivi(self,asiakas):
     """Luo asiakasrivin getterreitten saamilla tiedoilla."""
-    return f'{Asiakas.get_nimi()} ({Asiakas.get_asiakasnro()}) on {Asiakas.get_ika()}-vuotias.'
+    return f'{asiakas.get_nimi()} ({asiakas.get_asiakasnro()}) on {asiakas.get_ika()}-vuotias.'
     
     
     
-  def lisaa_asiakas(self,Asiakas):
+  def lisaa_asiakas(self,asiakas):
     """Lisää parametrinä annetun asiakkaan asiakkaat-listaan.
         nostaa ValeError:in, jos parametrin totuusarvo on false."""
-    self.__asiakkaat.append(Asiakas)
-    if Asiakas == False:
+    self.__asiakkaat.append(asiakas)
+    if asiakas == False:
       raise ValueError ("Anna asiakas.")
     
     
-  def poista_asiakas(self,Asiakas):
+  def poista_asiakas(self,asiakas):
     """Poistaa parametrinä annetun asiakkaan,
         jos asiakasta ei ole asiakkaat-listassa ohitetaan ValueError."""
     try:
-      self.__asiakkaat.remove(Asiakas)
+      self.__asiakkaat.remove(asiakas)
     except ValueError:
       pass
     
@@ -57,7 +55,6 @@ class ParempiPalvelu(Palvelu):
   """Luokka, joka kuvaa parempaa palvelua.
         :ivar edut: paremman palvelun edut
         :type edut: str
-
     Julkiset palvelut
     lisaa_etu
     poista_etu
@@ -101,7 +98,6 @@ class Asiakas:
         :type asiakasnro: int,list
         :ivar ika: asiakkaan ikä
         :type ika: int
-
         Yksityiset metodit
         luo_nro()
     """
