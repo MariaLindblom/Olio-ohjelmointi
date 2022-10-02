@@ -124,7 +124,7 @@ class Asiakas:
 
   def get_nimi(self):
     """Palauttaa nimen suoraan."""
-    return self._nimi
+    return self.__nimi
   
 
   def set_ika(self,asiakas_ika):
